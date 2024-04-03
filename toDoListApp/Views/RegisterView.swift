@@ -5,8 +5,9 @@ struct RegisterView: View {
     
     var body: some View {
         VStack {
+            backgroundView()
             // HEADER
-            headerView2(title: "Register", secondTitle: "Start Organizing ToDos",  angle: 0)
+            headerView2(title: "Register", secondTitle: "Start Organizing ToDos")
                 .padding(.bottom, 50)
             
             // Register Tab
@@ -20,7 +21,7 @@ struct RegisterView: View {
                 SecureField("Password", text: $viewModel.password)
                     .modifier(CustomTextField())
                 
-                TLButton(text: "Sign Up", color: .orange) {
+                riveButton(text: "Sign Up"){
                     viewModel.createdUser()
                 }
             }

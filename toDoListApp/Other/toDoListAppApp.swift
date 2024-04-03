@@ -17,6 +17,7 @@ struct toDoListAppApp: App {
     var body: some Scene {
         WindowGroup {
             MainView()
+            backgroundView()
         }
     }
 }

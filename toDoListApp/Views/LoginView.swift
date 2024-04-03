@@ -1,13 +1,15 @@
 import SwiftUI
+import RiveRuntime
 
 struct LoginView: View {
     @StateObject var viewModel = LoginViewViewModel()
-    
     var body: some View {
         NavigationView {
+
             VStack {
+                backgroundView()
                 // HEADER
-                headerView(title: "Bea' Yap", secondTitle: "Getting Around Here", angle: 0)
+                headerView2(title: "Bea' Yap", secondTitle: "Getting Around Here")
                     .padding(.bottom, 50)
                 
                 // LOGIN Tab
@@ -22,7 +24,7 @@ struct LoginView: View {
                     SecureField("Password", text: $viewModel.password)
                         .modifier(CustomTextField())
                     
-                    TLButton(text: "Log In", color: .pink) {
+                    riveButton(text: "Login") {
                         viewModel.login()
                     }
                 }
