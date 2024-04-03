@@ -26,17 +26,17 @@ class LoginViewViewModel: ObservableObject {
        errorMessage = ""
        
        guard !email.trimmingCharacters(in: .whitespaces).isEmpty else {
-           errorMessage = "Please fill in the email field"
+           errorMessage = "Please fill in the email field..."
            return false
        }
        
        guard !password.trimmingCharacters(in: .whitespaces).isEmpty else {
-           errorMessage = "Please fill in the password field"
+           errorMessage = "Please fill in the password field..."
            return false
        }
        
        guard email.contains("@") && email.contains(".") else {
-           errorMessage = "Please enter a valid email address"
+           errorMessage = "Please enter a valid email address..."
            return false
        }
        return true

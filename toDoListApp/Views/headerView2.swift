@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct headerView: View {
+struct headerView2: View {
     @State var title = ""
     @State var secondTitle = ""
     @State var angle: Double
@@ -8,7 +8,7 @@ struct headerView: View {
     
     var body: some View {
         ZStack{
-            Image(ImageResource.toDoListBack) // <-- Set your image name here
+            Image(ImageResource.toDoListBack2) // <-- Set your image name here
                 .aspectRatio(contentMode: .fill)
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
@@ -41,7 +41,7 @@ struct headerView: View {
     }
 }
 
-struct headerView_Previews: PreviewProvider {
+struct headerView2_Previews: PreviewProvider {
     static var previews: some View {
         headerView(title: "To Do List", secondTitle: "Getting Around Here", angle: 10)
     }

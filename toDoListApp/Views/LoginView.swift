@@ -1,56 +1,63 @@
-//
-//  LoginView.swift
-//  toDoListApp
-//
-//  Created by Berken Özbek on 19.03.2024.
-//
-
 import SwiftUI
 
 struct LoginView: View {
     @StateObject var viewModel = LoginViewViewModel()
-
+    
     var body: some View {
         NavigationView {
             VStack {
                 // HEADER
-                headerView(title: "To Do List", secondTitle: "Getting Around Here", color: .pink, angle: 15)
+                headerView(title: "Bea' Yap", secondTitle: "Getting Around Here", angle: 0)
+                    .padding(.bottom, 50)
                 
                 // LOGIN Tab
-                Form {
+                VStack(spacing: 20) {
                     if !viewModel.errorMessage.isEmpty {
-                           ScrollView {
-                               Text(viewModel.errorMessage)
-                                   .foregroundColor(.red)
-                                   .multilineTextAlignment(.center)
-                           }
-                       }
+                        Text(viewModel.errorMessage)
+                            .foregroundColor(.red)
+                            .multilineTextAlignment(.center)
+                    }
                     TextField("Email Address", text: $viewModel.email)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .autocorrectionDisabled()
-                        .autocapitalization(.none)
+                        .modifier(CustomTextField())
                     SecureField("Password", text: $viewModel.password)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .modifier(CustomTextField())
                     
                     TLButton(text: "Log In", color: .pink) {
                         viewModel.login()
                     }
-                    .padding()
                 }
-                .offset(y: -50)
-
+                .padding()
+                .background(Color.white)
+                .cornerRadius(15)
+                .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 2)
+                .padding()
+                
                 // Create User
                 VStack {
                     Text("New Around Here")
-                    
-                    // Go to registration view
-                    NavigationLink("Create New Account", destination: RegisterView())
+                    NavigationLink(destination: RegisterView()) {
+                        Text("Create New Account")
+                            .foregroundColor(.pink)
+                            .font(.headline)
+                    }
                 }
-                .padding(.bottom, 50)
                 
                 Spacer()
             }
+            .padding()
+            .navigationBarHidden(true)
         }
+    }
+}
+
+struct CustomTextField: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .padding()
+            .background(Color.white)
+            .cornerRadius(10)
+            .shadow(color: Color.black.opacity(0.1), radius: 2, x: 0, y: 2)
+            .padding(.horizontal, 15)
     }
 }
 

@@ -26,6 +26,7 @@
 		780F31AD2BAC52D4001093F6 /* ProfileViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F31AC2BAC52D4001093F6 /* ProfileViewViewModel.swift */; };
 		780F31AF2BAC52E5001093F6 /* RegisterViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F31AE2BAC52E5001093F6 /* RegisterViewViewModel.swift */; };
 		780F31B32BAC6FB0001093F6 /* Extencions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F31B22BAC6FB0001093F6 /* Extencions.swift */; };
+		780F31B52BBD6E74001093F6 /* headerView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F31B42BBD6E74001093F6 /* headerView2.swift */; };
 		78D4CF542BA9EF3900F893AA /* toDoListAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4CF532BA9EF3900F893AA /* toDoListAppApp.swift */; };
 		78D4CF582BA9EF3A00F893AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78D4CF572BA9EF3A00F893AA /* Assets.xcassets */; };
 		78D4CF5B2BA9EF3A00F893AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78D4CF5A2BA9EF3A00F893AA /* Preview Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		780F31AC2BAC52D4001093F6 /* ProfileViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewViewModel.swift; sourceTree = "<group>"; };
 		780F31AE2BAC52E5001093F6 /* RegisterViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewViewModel.swift; sourceTree = "<group>"; };
 		780F31B22BAC6FB0001093F6 /* Extencions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extencions.swift; sourceTree = "<group>"; };
+		780F31B42BBD6E74001093F6 /* headerView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headerView2.swift; sourceTree = "<group>"; };
 		78D4CF502BA9EF3900F893AA /* toDoListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toDoListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D4CF532BA9EF3900F893AA /* toDoListAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDoListAppApp.swift; sourceTree = "<group>"; };
 		78D4CF572BA9EF3A00F893AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				780F31882BA9F3B4001093F6 /* toDoListView.swift */,
 				780F318A2BA9F3D6001093F6 /* NewItemView.swift */,
 				780F319E2BAC4187001093F6 /* headerView.swift */,
+				780F31B42BBD6E74001093F6 /* headerView2.swift */,
 				780F31A02BAC461D001093F6 /* TLButton.swift */,
 			);
 			path = Views;
@@ -251,6 +254,7 @@
 				780F31B32BAC6FB0001093F6 /* Extencions.swift in Sources */,
 				780F31892BA9F3B4001093F6 /* toDoListView.swift in Sources */,
 				780F31832BA9F359001093F6 /* RegisterView.swift in Sources */,
+				780F31B52BBD6E74001093F6 /* headerView2.swift in Sources */,
 				780F318D2BA9F482001093F6 /* user.swift in Sources */,
 				78D4CF542BA9EF3900F893AA /* toDoListAppApp.swift in Sources */,
 				780F31872BA9F39B001093F6 /* ProfileView.swift in Sources */,
