@@ -5,11 +5,12 @@ struct LoginView: View {
     @StateObject var viewModel = LoginViewViewModel()
     var body: some View {
         NavigationView {
+        
 
             VStack {
                 backgroundView()
                 // HEADER
-                headerView2(title: "Bea' Yap", secondTitle: "Getting Around Here")
+                headerView2(title: "Bea' Yap", secondTitle: "Getting Around Here", definition: "Organize your tasks efficiently with our intuitive to-do list app.")
                     .padding(.bottom, 50)
                 
                 // LOGIN Tab
@@ -20,8 +21,20 @@ struct LoginView: View {
                             .multilineTextAlignment(.center)
                     }
                     TextField("Email Address", text: $viewModel.email)
+                        .padding(.horizontal, 50) // Adjust horizontal padding
+                        .overlay(content: {
+                            Image("Icon Email")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading, 8)
+                        })
                         .modifier(CustomTextField())
                     SecureField("Password", text: $viewModel.password)
+                        .padding(.horizontal, 50) // Adjust horizontal padding
+                        .overlay(content: {
+                            Image("Icon Lock")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading, 8)
+                        })
                         .modifier(CustomTextField())
                     
                     riveButton(text: "Login") {
@@ -42,13 +55,14 @@ struct LoginView: View {
                             .foregroundColor(.pink)
                             .font(.headline)
                     }
+                    
                 }
-                
                 Spacer()
             }
             .padding()
             .navigationBarHidden(true)
         }
+
     }
 }
 

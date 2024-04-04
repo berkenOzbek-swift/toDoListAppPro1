@@ -13,13 +13,32 @@ struct RegisterView: View {
             // Register Tab
             VStack(spacing: 20) {
                 TextField("Full Name", text: $viewModel.name)
+                    .padding(.horizontal, 50) // Adjust horizontal padding
+                    .overlay(content: {
+                        Image("Icon Email")
+                            .imageScale(.small)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.leading, 8)
+                    })
                     .modifier(CustomTextField())
                 
                 TextField("Email Address", text: $viewModel.email)
+                    .padding(.horizontal, 50) // Adjust horizontal padding
+                    .overlay(content: {
+                        Image("Icon Email")
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.leading, 8)
+                    })
+                    .modifier(CustomTextField())
+                SecureField("Password", text: $viewModel.password)
+                    .padding(.horizontal, 50) // Adjust horizontal padding
+                    .overlay(content: {
+                        Image("Icon Lock")
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.leading, 8)
+                    })
                     .modifier(CustomTextField())
                 
-                SecureField("Password", text: $viewModel.password)
-                    .modifier(CustomTextField())
                 
                 riveButton(text: "Sign Up"){
                     viewModel.createdUser()

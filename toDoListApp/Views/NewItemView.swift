@@ -25,7 +25,7 @@ struct NewItemView: View {
                 DatePicker("Time", selection: $viewModel.dueDate)
                     .datePickerStyle(GraphicalDatePickerStyle())
                 
-                TLButton(text: "Save", color: .pink) {
+                riveButton(text: "Save") {
                     if viewModel.canSave{
                         viewModel.save()
                         newItemPresented = false
