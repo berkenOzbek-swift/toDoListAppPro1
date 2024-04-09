@@ -18,29 +18,31 @@ struct toDoListView: View {
     
     var body: some View {
         NavigationView {
-            VStack{
-                List(Items) {item in
-                    toDoListItemsView(item: item)
-                        .swipeActions {
-                            Button("Delete") {
-                                viewModel.delete(id: item.id)
+                VStack{
+                    List(Items) {item in
+                        toDoListItemsView(item: item)
+                            .swipeActions {
+                                Button("Delete") {
+                                    viewModel.delete(id: item.id)
+                                }
+                                .tint(Color.red)
                             }
-                            .tint(Color.red)
-                        }
+                        
+                    }
+                    .listStyle(PlainListStyle())
                 }
-                .listStyle(PlainListStyle())
-            }
-            .navigationTitle("To Do List")
-            .toolbar {
-                Button {
-                    //action
-                    viewModel.showingNewItemView = true
-                } label: {
-                    Image(systemName: "plus")
+                .navigationTitle("To Do List")
+                .toolbar {
+                    Button {
+                        //action
+                        viewModel.showingNewItemView = true
+                    } label: {
+                        Image(systemName: "plus")
+                    }
                 }
-            }
-            .sheet(isPresented: $viewModel.showingNewItemView) {
-                NewItemView(newItemPresented: $viewModel.showingNewItemView)
+                
+                .sheet(isPresented: $viewModel.showingNewItemView) {
+                    NewItemView(newItemPresented: $viewModel.showingNewItemView)
             }
         }
     }

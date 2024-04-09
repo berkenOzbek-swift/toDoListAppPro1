@@ -18,6 +18,7 @@ struct NewItemView: View {
                 .font(.system(size: 32))
                 .bold()
                 .padding(.top, 100)
+            
             Form {
                 TextField("Title", text: $viewModel.title)
                     .textFieldStyle(DefaultTextFieldStyle() )

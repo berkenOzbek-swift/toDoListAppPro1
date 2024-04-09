@@ -14,7 +14,7 @@ struct MainView: View {
             //sigIn
             accountView
         }else {
-            LoginView()
+            firstMainPage()
         }
     }
     @ViewBuilder

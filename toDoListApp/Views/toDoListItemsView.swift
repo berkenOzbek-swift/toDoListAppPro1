@@ -12,7 +12,7 @@ struct toDoListItemsView: View {
     let item: toDoListItem
     
     var body: some View {
-        HStack{
+        HStack {
             VStack(alignment: .leading){
                 Text(item.title)
                     .font(.title2)
@@ -21,17 +21,21 @@ struct toDoListItemsView: View {
                     .foregroundColor(.gray)
             }
             Spacer()
-            
             Button {
                 viewModel.toggleIsDone(item: item)
             } label: {
                 Image(systemName: item.isDone ? "checkmark.circle.fill" : "circle")
                     .foregroundColor(.blue)
             }
-
         }
+        .background(Color.clear)
     }
 }
+
+#Preview {
+    toDoListItemsView(item: .init(id: "123", title: "Buy milk", dueDate: Date().timeIntervalSince1970, createdDate: Date().timeIntervalSince1970, isDone: false))
+}
+
 
 #Preview {
     toDoListItemsView(item: .init(id: "123", title: "Buy milk", dueDate: Date().timeIntervalSince1970, createdDate: Date().timeIntervalSince1970, isDone: false))

@@ -13,6 +13,7 @@ struct ProfileView: View {
     var body: some View {
         NavigationView {
             VStack{
+                backgroundView()
                 if let user = viewModel.user {
                     profile(user: user)
                 }else {
