@@ -39,7 +39,7 @@ struct headerView2: View {
             .padding(.top, 50)
         }
         .frame(width: UIScreen.main.bounds.width, height: 350) // Adjust the frame size according to your needs
-        .onAppear {
+        .onAppear() {
             self.animationStart.toggle()
         }
     }

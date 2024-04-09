@@ -9,7 +9,8 @@ import SwiftUI
 
 struct firstMainPage: View {
     @State private var redirectToLogin = false
-    
+    @State private var animationStart = false
+
     var body: some View {
         NavigationView {
             VStack {
@@ -17,16 +18,10 @@ struct firstMainPage: View {
                 Text("Let's Do It")
                     .font(.custom("Poppins Bold", size: 60, relativeTo: .largeTitle))
                     .foregroundColor(.black)
-                Button(action: {
+                    .animation(.easeInOut(duration: 0.5))
+                riveButton(text: "Star For Plans", action: {
                     self.redirectToLogin = true
-                }) {
-                    Text("Start For Plans")
-                }
-                .padding()
-                .background(Color.blue)
-                .foregroundColor(.white)
-                .cornerRadius(8)
-                .padding()
+                })
                 .fullScreenCover(isPresented: $redirectToLogin) {
                     LoginView()
                 }
@@ -43,8 +38,6 @@ struct BackgroundView: View {
 
 struct loginView: View {
     var body: some View {
-        // Implement your login view here
-        // For example:
         Text("Login View")
     }
 }

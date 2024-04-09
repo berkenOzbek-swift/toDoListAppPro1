@@ -5,8 +5,6 @@ struct LoginView: View {
     @StateObject var viewModel = LoginViewViewModel()
     var body: some View {
         NavigationView {
-        
-
             VStack {
                 backgroundView()
                 // HEADER
@@ -54,15 +52,13 @@ struct LoginView: View {
                         Text("Create New Account")
                             .foregroundColor(.pink)
                             .font(.headline)
-                    }
-                    
+                   }
                 }
                 Spacer()
             }
             .padding()
             .navigationBarHidden(true)
         }
-
     }
 }
 

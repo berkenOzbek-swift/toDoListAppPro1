@@ -41,8 +41,8 @@
 		780F31D52BBDA530001093F6 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F31D42BBDA530001093F6 /* CustomFont.swift */; };
 		780F31D72BBEE9C5001093F6 /* firstMainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F31D62BBEE9C5001093F6 /* firstMainPage.swift */; };
 		780F31D92BBEF116001093F6 /* customFont1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F31D82BBEF116001093F6 /* customFont1.swift */; };
+		7833E0692BC59EA200DDFB83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7833E0682BC59EA200DDFB83 /* Assets.xcassets */; };
 		78D4CF542BA9EF3900F893AA /* toDoListAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4CF532BA9EF3900F893AA /* toDoListAppApp.swift */; };
-		78D4CF582BA9EF3A00F893AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78D4CF572BA9EF3A00F893AA /* Assets.xcassets */; };
 		78D4CF5B2BA9EF3A00F893AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78D4CF5A2BA9EF3A00F893AA /* Preview Assets.xcassets */; };
 		78D4CF632BA9F13A00F893AA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 78D4CF622BA9F13A00F893AA /* FirebaseAuth */; };
 		78D4CF652BA9F13A00F893AA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 78D4CF642BA9F13A00F893AA /* FirebaseFirestore */; };
@@ -85,9 +85,9 @@
 		780F31D42BBDA530001093F6 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 		780F31D62BBEE9C5001093F6 /* firstMainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstMainPage.swift; sourceTree = "<group>"; };
 		780F31D82BBEF116001093F6 /* customFont1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customFont1.swift; sourceTree = "<group>"; };
+		7833E0682BC59EA200DDFB83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78D4CF502BA9EF3900F893AA /* toDoListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toDoListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78D4CF532BA9EF3900F893AA /* toDoListAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDoListAppApp.swift; sourceTree = "<group>"; };
-		78D4CF572BA9EF3A00F893AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78D4CF5A2BA9EF3A00F893AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		78D4CF682BA9F1C500F893AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,12 +150,12 @@
 		78D4CF522BA9EF3900F893AA /* toDoListApp */ = {
 			isa = PBXGroup;
 			children = (
+				7833E0682BC59EA200DDFB83 /* Assets.xcassets */,
 				780F31D32BBD9C29001093F6 /* Info.plist */,
 				78D4CF6D2BA9F22900F893AA /* Other */,
 				78D4CF6C2BA9F22300F893AA /* Models */,
 				78D4CF6B2BA9F21700F893AA /* ModelViews */,
 				78D4CF6A2BA9F20E00F893AA /* Views */,
-				78D4CF572BA9EF3A00F893AA /* Assets.xcassets */,
 				780F31CF2BBD9BE3001093F6 /* Fonts */,
 				780F31BD2BBD9344001093F6 /* RiveAssets */,
 				78D4CF592BA9EF3A00F893AA /* Preview Content */,
@@ -175,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				780F317E2BA9F319001093F6 /* MainView.swift */,
+				780F31D62BBEE9C5001093F6 /* firstMainPage.swift */,
 				780F31802BA9F338001093F6 /* LoginView.swift */,
 				780F31822BA9F359001093F6 /* RegisterView.swift */,
 				780F31862BA9F39B001093F6 /* ProfileView.swift */,
@@ -184,7 +185,6 @@
 				780F31B42BBD6E74001093F6 /* headerView2.swift */,
 				780F31C82BBD9437001093F6 /* backgroundView.swift */,
 				780F31CA2BBD95D1001093F6 /* riveButton.swift */,
-				780F31D62BBEE9C5001093F6 /* firstMainPage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,10 +298,10 @@
 				78D4CF5B2BA9EF3A00F893AA /* Preview Assets.xcassets in Resources */,
 				780F31BE2BBD9344001093F6 /* button.riv in Resources */,
 				780F31C22BBD9344001093F6 /* icons.riv in Resources */,
+				7833E0692BC59EA200DDFB83 /* Assets.xcassets in Resources */,
 				780F31C42BBD9344001093F6 /* shapes.riv in Resources */,
 				780F31C12BBD9344001093F6 /* house.riv in Resources */,
 				780F31D22BBD9BE3001093F6 /* Poppins-Bold.ttf in Resources */,
-				78D4CF582BA9EF3A00F893AA /* Assets.xcassets in Resources */,
 				780F31D02BBD9BE3001093F6 /* Inter-Regular.ttf in Resources */,
 				78D4CF692BA9F1C500F893AA /* GoogleService-Info.plist in Resources */,
 				780F31C32BBD9344001093F6 /* menu_button.riv in Resources */,
@@ -476,7 +476,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = toDoListApp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "To Do List ";
+				INFOPLIST_KEY_CFBundleDisplayName = "To Do List Pro";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -507,7 +507,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = toDoListApp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "To Do List ";
+				INFOPLIST_KEY_CFBundleDisplayName = "To Do List Pro";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
