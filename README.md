@@ -17,7 +17,6 @@ App’s Gain:
 After users register to the application with Firebase Authentication, they can store their data securely via Firebase Firestore. There is also a feature in the profile section that allows users to add pictures.
 In the application, the user interface is customized using the Rive library. This library is designed to provide a user-friendly experience and has been used to make the application more impressive. However, adding an additional feature to allow users to change their own personal theme in the app is an area I'm currently working on.
 
-Github Link: https://github.com/berkenOzbek-swift/toDoListAppPro1
 
 
 
